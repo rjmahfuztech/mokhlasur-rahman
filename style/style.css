@@ -14,11 +14,11 @@ body {
   margin-top: 5rem;
 }
 .btn {
-  padding: 10px 30px;
+  padding: 15px 30px;
   background-color: #ffbd39;
   font-size: 20px;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   color: #000000;
   font-weight: 600;
 }
@@ -26,7 +26,7 @@ body {
   color: #ffbd39;
 }
 
-/* Header Style  */
+/* Header section Style  */
 .header ul > li {
   margin-right: 1.5rem;
 }
@@ -49,23 +49,81 @@ body {
 .h-title {
   color: white;
 }
+/* About me section Style  */
+.about-me {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px;
+}
+.about-info > h1 {
+  max-width: 20rem;
+  font-size: 3.5rem;
+  border-bottom: 5px solid #ffbd39;
+  border-left: 5px solid #ffbd39;
+  padding-left: 10px;
+}
+.about-info > h4 {
+  margin: 1.5rem 0;
+  border-left: 5px solid #ffbd39;
+  padding-left: 10px;
+}
+.about-info {
+  max-width: 620px;
+}
+.about-info > p,
+.key > li,
+.value > li {
+  font-size: 18px;
+  margin: 1rem 0;
+  color: #8c8c8c;
+}
+.info {
+  display: flex;
+  gap: 20px;
+}
+.info li {
+  list-style: none;
+}
+.info .key > li {
+  font-weight: 700;
+  color: white;
+}
 
 /* Responsive Style  */
 @media screen and (max-width: 576px) {
   .header-banner {
     flex-direction: column;
   }
-  .header-profile > img {
+  .header-profile > img,
+  .profile-pic > img {
     width: 100%;
     margin-top: 30px;
   }
   .section-margin {
     margin-top: 3rem;
   }
+  .about-me {
+    flex-direction: column-reverse;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
   .header-profile > img {
     width: 100%;
+  }
+  .about-me {
+    padding: 0;
+  }
+  .about-info > p,
+  .key > li,
+  .value > li {
+    font-size: 16px;
+    margin: 5px;
+    color: #8c8c8c;
+  }
+  .profile-pic > img {
+    width: 300px;
   }
 }
