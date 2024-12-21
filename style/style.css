@@ -49,6 +49,20 @@ body {
 .h-title {
   color: white;
 }
+/* Header Sticky */
+nav.header-sticky {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: 2000;
+  transition: 0.4s;
+  margin-top: 0 !important;
+  padding: 1.5rem 0;
+}
 /* About me section Style  */
 .about-me {
   display: flex;
@@ -110,6 +124,22 @@ body {
   padding: 20px;
   border-radius: 10px;
 }
+/* Hobby section Style */
+.hobby-section > h1 {
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #ffbd39;
+  padding-left: 10px;
+}
+.card-group {
+  color: black;
+}
+.card-group h5 {
+  font-weight: bold;
+}
+.card-group .teacher {
+  width: 80%;
+  margin: 0 auto;
+}
 /* Contact section Style  */
 .contact-me {
   max-width: 1200px;
@@ -141,6 +171,27 @@ body {
   text-align: center;
   padding-bottom: 5px;
   border-radius: 2px;
+}
+footer {
+  text-align: center;
+  background-color: #130d0de1;
+  padding: 10px 20px;
+}
+.social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.social > a > li {
+  list-style: none;
+  font-size: 2.5rem;
+  color: rgb(186, 116, 56);
+}
+.social > a > li:hover {
+  color: rgb(238, 238, 238);
+  transition: 0.3s;
+  transform: scale(1.2);
 }
 
 /* Responsive Style  */

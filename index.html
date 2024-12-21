@@ -16,10 +16,14 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/300c022ecd.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="web-width">
-      <header class="header">
+      <header id="home" class="header">
         <nav class="navbar navbar-expand-lg navbar-dark mt-2">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">Mokhlasur</a>
@@ -42,27 +46,22 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a class="nav-link active" aria-current="page" href="#about"
                     >About Me</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Teaching Philosophy</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a class="nav-link active" aria-current="page" href="#resume"
                     >Achievement</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a class="nav-link active" aria-current="page" href="#hobby"
                     >Hobbies</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a class="nav-link active" aria-current="page" href="#contact"
                     >Contact</a
                   >
                 </li>
@@ -76,8 +75,15 @@
             <h1 class="common-color">
               <span class="h-title">I'm</span> Mokhlesur<br />Rahman
             </h1>
-            <h4>A Engineering Subject Teacher</h4>
-            <button class="btn btn-success">Contact Me</button>
+            <h4>
+              Teacher of Rajshahi Polytechnic Institute, Department<br />of
+              <cite>Mechatronics Technology</cite>
+            </h4>
+            <a href="#contact"
+              ><button class="btn btn-success">
+                <i class="fa-solid fa-id-badge"></i> Contact Me
+              </button></a
+            >
           </div>
           <div class="header-profile">
             <img src="images/profile.jpeg" alt="Profile Picture" />
@@ -85,7 +91,7 @@
         </section>
       </header>
       <main>
-        <section class="about-me section-margin">
+        <section id="about" class="about-me section-margin">
           <div class="profile-pic">
             <img src="images/profile.jpeg" alt="Profile Picture" />
           </div>
@@ -115,17 +121,21 @@
                 <li>01925988521</li>
               </div>
             </div>
-            <h4>Download my CV:</h4>
-            <button class="btn btn-success">Download CV</button>
+            <h4><i class="fa-solid fa-download"></i> Download my CV:</h4>
+            <button class="btn btn-success">
+              <i class="fa-solid fa-download"></i> Download CV
+            </button>
           </div>
         </section>
-        <section class="resume-section section-margin">
+        <section id="resume" class="resume-section section-margin">
           <div class="resume-info">
-            <h1>Resume</h1>
+            <h1>Achievement</h1>
             <p>
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia. It is a paradisematic country, in
-              which roasted parts of sentences fly into your mouth.
+              After years of hard work and dedication, I am proud to have earned
+              the following degrees and certifications. This accomplishment
+              represents a significant milestone in my professional journey. It
+              is a testament to my commitment to continuous learning and growth
+              in the field of education.
             </p>
           </div>
           <div class="resume">
@@ -171,10 +181,51 @@
             </div>
           </div>
         </section>
-        <section class="hobby-section section-margin">
-          <h1>Hobby</h1>
+        <section id="hobby" class="hobby-section section-margin">
+          <h1>My Hobbies Are:</h1>
+          <div class="card-group gap-3">
+            <div class="card">
+              <img
+                src="images/teaching.jpeg"
+                class="card-img-top teacher"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Teaching</h5>
+                <p class="card-text">
+                  Teaching is my passion, as it allows me to share knowledge and
+                  inspire young minds. I love creating a positive impact and
+                  helping students achieve their goals. Every lesson is an
+                  opportunity to grow together.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/traveling.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Traveling</h5>
+                <p class="card-text">
+                  Exploring new places and cultures broadens my perspective and
+                  fuels my creativity. I enjoy discovering hidden gems and
+                  meeting people from diverse backgrounds. Traveling brings me
+                  joy and unforgettable memories.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/badminton.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Playing</h5>
+                <p class="card-text">
+                  Engaging in sports and games helps me stay active and
+                  refreshed. I enjoy the thrill of competition and the sense of
+                  teamwork it fosters. Playing is my way to unwind and recharge.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
-        <section class="section-margin">
+        <section id="contact" class="section-margin">
           <h1 class="contact-title">Contact Me</h1>
           <div class="contact-me">
             <div class="contact-img">
@@ -208,5 +259,26 @@
         </section>
       </main>
     </div>
+    <footer class="section-margin">
+      <div class="social">
+        <a href=""
+          ><li><i class="fa-brands fa-facebook"></i></li
+        ></a>
+        <a href=""
+          ><li><i class="fa-brands fa-twitter"></i></li
+        ></a>
+        <a href=""
+          ><li><i class="fa-brands fa-whatsapp"></i></li
+        ></a>
+        <a href=""
+          ><li><i class="fa-brands fa-linkedin"></i></li
+        ></a>
+      </div>
+      <p>
+        Copyright © <span id="currentYear"></span>
+        <strong>Mokhlasur Rahman</strong>. All rights reserved.
+      </p>
+    </footer>
+    <script src="index.js"></script>
   </body>
 </html>
