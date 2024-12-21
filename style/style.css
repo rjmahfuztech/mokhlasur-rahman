@@ -90,6 +90,26 @@ body {
   font-weight: 700;
   color: white;
 }
+/* Resume section Style */
+.resume-section > .resume-info {
+  max-width: 930px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.resume-section p {
+  color: #8c8c8c;
+}
+.resume {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.certification {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+}
 /* Contact section Style  */
 .contact-me {
   max-width: 1200px;
@@ -146,6 +166,9 @@ body {
   }
   .contact-title {
     margin-bottom: 2rem;
+  }
+  .resume {
+    grid-template-columns: 1fr;
   }
 }
 
