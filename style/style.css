@@ -25,6 +25,10 @@ body {
 .common-color {
   color: #ffbd39;
 }
+/* .header-profile > img,
+.profile-pic > img {
+  width: 1000px;
+} */
 
 /* Header section Style  */
 .header ul > li {
@@ -161,7 +165,7 @@ nav.header-sticky {
   border-radius: 10px;
 }
 .form-input > input {
-  padding: 12px 8px;
+  padding: 8px 6px;
 }
 .contact-title {
   max-width: 20rem;
@@ -211,6 +215,10 @@ footer {
   .about-me {
     flex-direction: column-reverse;
     padding: 0;
+  }
+  .key > li,
+  .value > li {
+    font-size: 16px;
   }
   .contact-img > img {
     width: 100%;

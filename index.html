@@ -20,13 +20,17 @@
       src="https://kit.fontawesome.com/300c022ecd.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
   <body>
     <div class="web-width">
       <header id="home" class="header">
         <nav class="navbar navbar-expand-lg navbar-dark mt-2">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mokhlasur</a>
+            <a class="navbar-brand fs-3" href="#">Moklasur</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -73,11 +77,11 @@
           <div class="header-text">
             <h5 class="common-color">HELLO!</h5>
             <h1 class="common-color">
-              <span class="h-title">I'm</span> Mokhlesur<br />Rahman
+              <span class="h-title">I'm</span> Moklasur<br />Rahman
             </h1>
             <h4>
               Teacher of Rajshahi Polytechnic Institute, Department<br />of
-              <cite>Mechatronics Technology</cite>
+              <strong>Mechatronics Technology</strong>
             </h4>
             <a href="#contact"
               ><button class="btn btn-success">
@@ -86,14 +90,14 @@
             >
           </div>
           <div class="header-profile">
-            <img src="images/profile.jpeg" alt="Profile Picture" />
+            <img src="images/profile.png" alt="Profile Picture" />
           </div>
         </section>
       </header>
       <main>
         <section id="about" class="about-me section-margin">
           <div class="profile-pic">
-            <img src="images/profile.jpeg" alt="Profile Picture" />
+            <img src="images/profile.png" alt="Profile Picture" />
           </div>
           <div class="about-info">
             <h1>About Me</h1>
@@ -113,12 +117,12 @@
                 <li>Phone:</li>
               </div>
               <div class="value">
-                <li>Mokhlasur Rahman</li>
-                <li>Januare 1, 1982</li>
-                <li>Example,Sopura,Rajshahi</li>
+                <li>Md. Moklasur Rahman</li>
+                <li>March 10, 1992</li>
+                <li>Sopura,Rajshahi</li>
                 <li>20202</li>
-                <li>mokhlasur@example.com</li>
-                <li>01925988521</li>
+                <li>moklasurme10@gmail.com</li>
+                <li>01721661863</li>
               </div>
             </div>
             <h4><i class="fa-solid fa-download"></i> Download my CV:</h4>
@@ -141,8 +145,8 @@
           <div class="resume">
             <div class="certification">
               <h3 class="common-color">2014-2015</h3>
-              <h2>Master Degree Of Design</h2>
-              <h6>Dhaka University</h6>
+              <h2>B Sc in Mechanical Engineering</h2>
+              <h6>Khulna University of Engineering and Technology</h6>
               <p>
                 A small river named Duden flows by their place and supplies it
                 with the necessary regelialia. It is a paradisematic country, in
@@ -151,8 +155,8 @@
             </div>
             <div class="certification">
               <h3 class="common-color">2014-2015</h3>
-              <h2>Master Degree Of Design</h2>
-              <h6>Dhaka University</h6>
+              <h2>B Sc in Mechanical Engineering</h2>
+              <h6>Khulna University of Engineering and Technology</h6>
               <p>
                 A small river named Duden flows by their place and supplies it
                 with the necessary regelialia. It is a paradisematic country, in
@@ -161,8 +165,8 @@
             </div>
             <div class="certification">
               <h3 class="common-color">2014-2015</h3>
-              <h2>Master Degree Of Design</h2>
-              <h6>Dhaka University</h6>
+              <h2>B Sc in Mechanical Engineering</h2>
+              <h6>Khulna University of Engineering and Technology</h6>
               <p>
                 A small river named Duden flows by their place and supplies it
                 with the necessary regelialia. It is a paradisematic country, in
@@ -171,8 +175,8 @@
             </div>
             <div class="certification">
               <h3 class="common-color">2014-2015</h3>
-              <h2>Master Degree Of Design</h2>
-              <h6>Dhaka University</h6>
+              <h2>B Sc in Mechanical Engineering</h2>
+              <h6>Khulna University of Engineering and Technology</h6>
               <p>
                 A small river named Duden flows by their place and supplies it
                 with the necessary regelialia. It is a paradisematic country, in
@@ -227,28 +231,82 @@
         </section>
         <section id="contact" class="section-margin">
           <h1 class="contact-title">Contact Me</h1>
+          <!-- Success Alert -->
+          <div
+            id="alert-success"
+            class="alert text-center w-75 m-auto mb-2 alert-success alert-dismissible fade show"
+            role="alert"
+            style="display: none"
+          >
+            <strong>Success!</strong> Your email has been sent.
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Error Alert -->
+          <div
+            id="alert-error"
+            class="alert text-center w-75 m-auto mb-2 alert-danger alert-dismissible fade show"
+            role="alert"
+            style="display: none"
+          >
+            <strong>Error!</strong> Failed to send your email. Please try again
+            later.
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
           <div class="contact-me">
             <div class="contact-img">
               <img src="images/contact.jpeg" alt="Contact Picture" />
             </div>
-            <form>
-              <div class="mb-3 form-input">
-                <input type="Text" class="form-control" placeholder="Name" />
+            <form id="contact-form" onsubmit="sendEmail(event)">
+              <div class="mb-2 form-input">
+                <input
+                  type="Text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  placeholder="Name"
+                  required
+                />
               </div>
-              <div class="mb-3 form-input">
+              <div class="mb-2 form-input">
                 <input
                   type="email"
+                  id="email"
+                  name="email"
                   class="form-control"
                   aria-describedby="emailHelp"
                   placeholder="Email"
+                  required
                 />
               </div>
-              <div class="mb-3 form-input">
+              <div class="mb-2 form-input">
+                <input
+                  type="Text"
+                  id="subject"
+                  name="subject"
+                  class="form-control"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="mb-2 form-input">
                 <textarea
                   class="form-control"
                   placeholder="Message..."
-                  id="exampleFormControlTextarea1"
+                  id="message"
+                  name="message"
                   rows="5"
+                  required
                 ></textarea>
               </div>
               <div class="d-grid">
@@ -261,16 +319,15 @@
     </div>
     <footer class="section-margin">
       <div class="social">
-        <a href=""
+        <a target="_blank" href="https://www.facebook.com/moklasur.rahman.75"
           ><li><i class="fa-brands fa-facebook"></i></li
         ></a>
-        <a href=""
-          ><li><i class="fa-brands fa-twitter"></i></li
-        ></a>
-        <a href=""
+        <a target="_blank" href="https://wa.me/8801721661863"
           ><li><i class="fa-brands fa-whatsapp"></i></li
         ></a>
-        <a href=""
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/md-moklasur-rahman-4b4375121/"
           ><li><i class="fa-brands fa-linkedin"></i></li
         ></a>
       </div>
